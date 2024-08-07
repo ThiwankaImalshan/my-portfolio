@@ -14,7 +14,8 @@
     <header>
         <nav>
             <div class="logo">
-                <h2>Thiwanka</h2>
+                <img src="img/main-logo.png" width="50px">
+                <!-- <h2>Thiwanka</h2> -->
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -22,7 +23,7 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="path/to/your/resume.pdf" download>
+            <a href="resume/my-cv.pdf" download>
                 <button class="request-btn">Resume</button>
             </a>
             <div class="hamburger">
@@ -120,31 +121,35 @@
             <button class="category-btn" data-category="php">C# Projects</button>
             <button class="category-btn" data-category="ui">UI Projects</button>
         </div>
+
         <div class="project-category" id="html-projects">
-            <a href="https://www.figma.com/design/GMI6vO6v50eLAOejhqs2rc/Grocery-Delivary-System?t=U2NyLY5GfagDxlUi-1" class="project-link">
+            <a href="https://github.com/ThiwankaImalshan/GroceGo/tree/main/GrocGo%20Website" class="project-link">
                 <div class="project-card">
-                    <img src="img/UI Designs/Grocery Delivary System-copy.png" alt="Project Image">
-                    <h4>E Commerce</h4>
-                    <p>Design for the Grocery Delivery Web Project</p>
+                    <img src="img/Web Projects/customer_interface.png" alt="Project Image">
+                    <h4>GrocGo - Ecommerce Web </h4>
+                    <p>Design Ecommerce Web for the Grocery Delivery Web Project</p>
                 </div>
             </a>
-            <a href="https://www.figma.com/design/dwCSZO1EqLPJVJXWtSOmTA/Reservation?t=U2NyLY5GfagDxlUi-1" class="project-link">
+            <a href="https://github.com/ThiwankaImalshan/GroceGo/tree/main/Admin%20Dashboard" class="project-link">
                 <div class="project-card">
-                    <img src="img/UI Designs/Reservation-copy.png" alt="Project Image">
-                    <h4>Reservation</h4>
-                    <p>Design for the Hotel Reseravation Web Project</p>
+                    <img src="img/Web Projects/Admin_panel.png" alt="Project Image">
+                    <h4>GrocGo - Admin Panel</h4>
+                    <p>Design Admin Panel for the Grocery Delivery Web Project</p>
                 </div>
             </a>
-            <a href="https://www.figma.com/design/nBx76e7jkQLqby222EHlbk/Thapro-Safari?t=U2NyLY5GfagDxlUi-1" class="project-link">
+            <a href="https://github.com/ThiwankaImalshan/GroceGo/tree/main/Deliver%20Dashboard" class="project-link">
                 <div class="project-card">
-                    <img src="img/UI Designs/Thapro Safari-copy.png" alt="Project Image">
-                    <h4>Travel</h4>
-                    <p>Design for the Travel Safari Web Site</p>
+                    <img src="img/Web Projects/Delivery_Dashboard.png" alt="Project Image">
+                    <h4>GrocGo - Delivery Dashboard </h4>
+                    <p>Design Delivery Dashboard for the Grocery Delivery Web Project</p>
                 </div>
             </a>
         </div>
+
+
+
         <div class="project-category" id="php-projects" style="display: none;">
-            <a href="https://www.figma.com/design/GMI6vO6v50eLAOejhqs2rc/Grocery-Delivary-System?t=U2NyLY5GfagDxlUi-1" class="project-link">
+            <!-- <a href="https://www.figma.com/design/GMI6vO6v50eLAOejhqs2rc/Grocery-Delivary-System?t=U2NyLY5GfagDxlUi-1" class="project-link">
                 <div class="project-card">
                     <img src="img/UI Designs/Grocery Delivary System-copy.png" alt="Project Image">
                     <h4>E Commerce</h4>
@@ -164,9 +169,12 @@
                     <h4>Travel</h4>
                     <p>Design for the Travel Safari Web Site</p>
                 </div>
-            </a>
+            </a> -->
             <!-- Add more PHP project cards as needed -->
         </div>
+
+
+
         <div class="project-category" id="ui-projects" style="display: none;">
             <a href="https://www.figma.com/design/GMI6vO6v50eLAOejhqs2rc/Grocery-Delivary-System?t=U2NyLY5GfagDxlUi-1" class="project-link">
                 <div class="project-card">
@@ -191,6 +199,8 @@
             </a>
             <!-- Add more UI project cards as needed -->
         </div>
+
+
     </section>
 
 
@@ -333,6 +343,7 @@
 
             hamburger.addEventListener("click", () => {
                 navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
             });
         });
 
