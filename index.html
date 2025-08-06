@@ -57,7 +57,7 @@
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>A passionate software developer with expertise in C# and VB .NET with a strong foundation in these languages, I thrive in creating efficient and scalable solutions to complex problems. Whether it's building robust applications or optimizing existing problems, I bring dedication and innovation to every project I undertake. Let's connect and explore opportunities to collaborate! 
+        <p>A passionate software developer with experience in C# ,VB .NET, java, frondend and backend development with a strong foundation in these languages, I thrive in creating efficient and scalable solutions to complex problems. Whether it's building robust applications or optimizing existing problems, I bring dedication and innovation to every project I undertake. Let's connect and explore opportunities to collaborate! 
             <br><br>
             And also I have experience in maintain a company’s computer workstations and software for all employees and also install new workstations and ensure they work properly before new employees start working.</p>
     </section>
@@ -104,7 +104,7 @@
                 <li style="--accent-color:#1B5F8C">
                     <div class="date">2023</div>
                     <div class="title">Freelance UI Designer</div>
-                    <div class="descr">2 Year experience in UI designing field</div>
+                    <!-- <div class="descr">2 Year experience in UI designing field</div> -->
                 </li>
                 <!-- Add more work items as needed -->
             </ul>
@@ -158,6 +158,13 @@
                     <img src="img\UI Designs\Kids Learning App.jpg" alt="Project Image">
                     <h4>Kids Learning App </h4>
                     <p>Fun & Interactive Sinhala Alphabet Learning</p>
+                </div>
+            </a>
+            <a href="https://github.com/ThiwankaImalshan/School_Bus_Tracker" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="img\Web Projects\safetoschool.jpg" alt="Project Image">
+                    <h4>Safe to School - School Bus Tracker </h4>
+                    <p>Real-time Smart School Bus Tracking System</p>
                 </div>
             </a>
         </div>
@@ -248,7 +255,7 @@
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -261,9 +268,10 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="button" onclick="sendWhatsApp()">Send Message</button>
         </form>
     </section>
+
     
     
     
@@ -280,7 +288,7 @@
             <a href="https://github.com/ThiwankaImalshan" target="_blank" class="social-icon github" aria-label="GitHub">
                 <i class="ri-github-fill"></i>
             </a>
-            <a href="https://wa.me/qr/PPGI2RHHWHURA1" target="_blank" class="social-icon whatsappp" aria-label="Whatsapp">
+            <a href="https://wa.me/+94710446742" target="_blank" class="social-icon whatsappp" aria-label="Whatsapp">
                 <i class="ri-whatsapp-line"></i>
             </a>
         </div>
@@ -400,6 +408,49 @@
                 });
             });
         });
+
+
+        function sendWhatsApp() {
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate form
+            if (!name || !email || !message) {
+                alert('Please fill in all fields before sending the message.');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Replace with your WhatsApp number (include country code without + sign)
+            // Example: for +1234567890, use 1234567890
+            const phoneNumber = '+94710446742'; // Replace with your actual WhatsApp number
+            
+            // Create the message
+            const whatsappMessage = `Hello! I'm contacting you through your portfolio.
+
+        *Name:* ${name}
+        *Email:* ${email}
+
+        *Message:*
+        ${message}`;
+            
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+        }
 
         </script>
         
